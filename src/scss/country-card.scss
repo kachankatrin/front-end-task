@@ -1,0 +1,72 @@
+.grid-container {
+    flex: 10;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, max-content));
+    grid-gap: 3vmin;
+    grid-auto-rows: minmax(430px, max-content);
+    justify-content: center;
+    .card {
+        max-width: 380px;
+        position: relative;
+        perspective: 1000px;
+        cursor: pointer;
+
+        .side {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50rem;
+            backface-visibility: hidden;
+            transition: all .5s; 
+            overflow: hidden;
+            border-radius: 3px;
+        }
+        .front {
+            background-color: #f0f0f0;
+            height: 100%;
+            box-shadow: 0 2rem 4rem;
+            text-align: center;
+            line-height: 1.5;
+            img {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            h1 {
+                font-family: Lato-Bold;
+            }
+        }
+        .back {
+            background-color: #f0f0f0;
+            height: 100%;
+            transform: rotateY(180deg);
+            box-shadow: 0 2rem 4rem;
+            padding: 0.5rem 2.5rem;
+            line-height: 1.8;
+            font-size: 1.8rem;
+            .flex-container {
+                padding-top: 2rem;
+                display: flex;
+                justify-content: space-between;
+                .naming {
+                    font-family: Lato-Bold;
+                    font-size: 1.4rem;
+                }
+                ul {
+                    li {
+                        padding-left: 2rem;
+                        span {
+                            font-family: Lato-Light;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover .front {
+            transform: rotateY(180deg);
+        }
+        &:hover .back {
+          transform: rotateY(0deg);
+        }
+    }
+}

@@ -1,0 +1,31 @@
+div {
+    .sidebar {
+        width: 100%;
+        flex: 2;
+        background-color: #ffe8df;
+        margin-right: 3vmin;
+        form {
+            padding: 2rem 1rem;
+            position: sticky;
+            top: 5%;
+            line-height: 1.8;
+            font-size: 1.8rem;
+            button {
+                margin-top: 3rem;
+                background-color: transparent;
+                text-transform: uppercase;
+                cursor: pointer;
+                font-family: Lato-Bold;
+                text-decoration: underline;
+                color: #888888;
+                font-size: 1.8rem;
+                &:hover {
+                    opacity: 0.8;
+                }
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+}
